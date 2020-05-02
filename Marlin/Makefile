@@ -57,11 +57,11 @@
 #
 
 # This defines the board to compile for (see boards.h for your board's ID)
-HARDWARE_MOTHERBOARD ?= 11
+HARDWARE_MOTHERBOARD ?= 1020
 
 # Arduino source install directory, and version number
 # On most linuxes this will be /usr/share/arduino
-ARDUINO_INSTALL_DIR  ?= ${HOME}/Arduino
+ARDUINO_INSTALL_DIR  ?= usr/share/arduino/
 ARDUINO_VERSION      ?= 106
 
 # The installed Libraries are in the User folder
@@ -74,7 +74,7 @@ AVR_TOOLS_PATH ?=
 UPLOAD_RATE        ?= 57600
 AVRDUDE_PROGRAMMER ?= arduino
 # on most linuxes this will be /dev/ttyACM0 or /dev/ttyACM1
-UPLOAD_PORT        ?= /dev/ttyUSB0
+UPLOAD_PORT        ?= /dev/ttyACM0
 
 #Directory used to build files in, contains all the build files, from object files to the final hex file
 #on linux it is best to put an absolute path like /home/username/tmp .
@@ -90,7 +90,7 @@ WIRE               ?= 0
 U8GLIB             ?= 1
 
 # this defines whether to include the Trinamic TMCStepper library
-TMC                ?= 1
+TMC                ?= 0
 
 # this defines whether to include the AdaFruit NeoPixel library
 NEOPIXEL           ?= 0
